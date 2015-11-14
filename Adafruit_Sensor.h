@@ -16,16 +16,16 @@
 
 /* Update by K. Townsend (Adafruit Industries) for lighter typedefs, and
  * extended sensor support to include color, voltage and current */
- 
+
 #ifndef _ADAFRUIT_SENSOR_H
 #define _ADAFRUIT_SENSOR_H
 
-#if ARDUINO >= 100
- #include "Arduino.h"
- #include "Print.h"
-#else
- #include "WProgram.h"
-#endif
+// #if ARDUINO >= 100
+//  #include "Arduino.h"
+//  #include "Print.h"
+// #else
+//  #include "WProgram.h"
+// #endif
 
 /* Intentionally modeled after sensors.h in the Android API:
  * https://github.com/android/platform_hardware_libhardware/blob/master/include/hardware/sensors.h */
@@ -146,7 +146,7 @@ class Adafruit_Sensor {
   virtual void enableAutoRange(bool enabled) {};
   virtual bool getEvent(sensors_event_t*) = 0;
   virtual void getSensor(sensor_t*) = 0;
-  
+
  private:
   bool _autoRange;
 };
